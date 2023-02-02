@@ -8,12 +8,15 @@ body {
   font-family: 'Kiwi Maru', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.Body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -22,12 +25,13 @@ body {
 }
 
 .nav-left {
+  margin-left: 50px;
   display: flex;
 }
 
 .nav-right {
   display: flex;
-  margin-right: 40px;
+  margin-right: 50px;
 }
 
 .startButton {

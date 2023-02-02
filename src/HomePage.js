@@ -1,15 +1,14 @@
-import React from 'react';
-import styles from './App.module.css';
-import { useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate, Router } from 'react-router-dom';
 
 
 const HomePage = () => {
-    const history = useHistory();
-    const [isClicked, setClick] = useState(false);
+const history = useNavigate();
+const [isClicked, setClick] = useState(false);
 
     const handleClick = () => {
         setClick(true);
-        history.push('/start')
+        history('/start');
     }
     return (
         <div>
@@ -25,13 +24,14 @@ const HomePage = () => {
                     <button className="signup-button">Нэвтрэх</button>
                 </div>
             </div>
-            <div className={styles.body}>
+            <div className="Body">
                 <h1>Welcome to my site!</h1>
                 <p>This is the body of the page where you can add your content.</p>
                 <button className="startButton" onClick={handleClick}>Эхлэх</button>
             </div>
         </div>
     );
+
 };
 
 export default HomePage;
