@@ -1,33 +1,194 @@
 @import url('https://fonts.googleapis.com/css2?family=Podkova:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,500&family=Podkova:wght@600&display=swap');
-@font-face {
-  font-family: 'TOYZ';
-  src: url('/Users/tiffanym/mongke/public/fonts/TOYZ.otf') format('opentype'),
-       url('/Users/tiffanym/mongke/public/fonts/TOYZ.ttf') format('truetype');
-}
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,500&family=Kiwi+Maru:wght@500&family=Podkova:wght@600&display=swap');
 
-
 body {
+  margin: 0;
   background-color: #f6eeea;
+  font-family: 'Kiwi Maru', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
-  width: 50%;
-  padding: 10px;
+  width: 100%;
+  padding: 15px;
 }
 
-.nav-button {
-  background-color: #157df9;
-  color: #f6eeea;
-  border-radius: 50px;
-  padding: 5px 20px;
-  font-size: 16px;
-  border: none;
+.nav-left {
+  display: flex;
+}
+
+.nav-right {
+  display: flex;
+  margin-right: 40px;
+}
+
+.startButton {
+  appearance: button;
+  background-color: #fb6f6b;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  font-family: 'Podkova';
+  font-size: 50px;
+  font-weight: 800px;
+  letter-spacing: 0.8px;
+  line-height: 40px;
+  margin: 0;
+  padding: 10px 10px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: filter 0.2s;
+  vertical-align: middle;
+  white-space: nowrap;
+  box-shadow: 0px 15px 15px #d3d3d3;
+}
+
+.startButton:after {
+  background-clip: padding-box;
+  background-color: #1cb0f6;
+  border-width: 0 0 8px;
+  bottom: -8px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.startButton:main,
+.nav-button:focus {
+  user-select: auto;
+}
+
+.startButton:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+  box-shadow: 0px 18px 18px #d3d3d3;
+  transform: translateY(4px);
+}
+
+.startButton:disabled {
   cursor: pointer;
-  font-family: 'Jost', sans-serif;
-  font-family: 'Kiwi Maru', serif;
-  font-family: 'Podkova', serif;
+}
+.nav-button {
+  appearance: button;
+  background-color: #1bb373;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: 'Podkova', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter 0.2s;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+  margin-right: 30px;
+  box-shadow: 0px 15px 15px #d3d3d3;
+}
+
+.nav-button:after {
+  background-clip: padding-box;
+  background-color: #1cb0f6;
+  border-width: 0 0 8px;
+  bottom: -8px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.nav-button:main,
+.nav-button:focus {
+  user-select: auto;
+}
+
+.nav-button:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+  box-shadow: 0px 18px 18px #d3d3d3;
+  transform: translateY(4px);
+}
+
+.nav-button:disabled {
+  cursor: auto;
+}
+
+.signup-button {
+  appearance: button;
+  background-color: #1bb373;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: 'Podkova', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter 0.2s;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+  margin-left: 30px;
+  box-shadow: 0px 10px 15px #d3d3d3;
+}
+
+.singup-button:after {
+  background-clip: padding-box;
+  background-color: #1cb0f6;
+  border-width: 0 0 8px;
+  bottom: -8px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.signup-button:main,
+.nav-button:focus {
+  user-select: auto;
+}
+
+.signup-button:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+  box-shadow: 0px 18px 18px #d3d3d3;
+  transform: translateY(4px);
+}
+
+.singup-button:disabled {
+  cursor: auto;
 }
