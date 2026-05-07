@@ -1,0 +1,232 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #E8DDC9;
+}
+
+body {
+  font-family: 'Montserrat SemiBold', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.container-homepage {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url('background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+span {
+  font-size: 3rem;
+  font-weight: bold;
+  transform: translateX(-50%);
+}
+
+.filled-text {
+    color: black;
+    z-index: 0;
+    writing-mode: vertical-lr;
+}
+
+.outlined-text {
+    color: transparent;
+    -webkit-text-stroke: 0.5px black;
+    z-index: 2;
+    writing-mode: vertical-lr;
+  }
+
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  margin: 1rem 1.5rem 0;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 18px;
+  box-shadow:
+    0 6px 24px rgba(15, 23, 42, 0.08),
+    0 1px 2px rgba(15, 23, 42, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.nav-buttons-left,
+.nav-buttons-right {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+}
+
+.nav-button {
+  background-color: transparent;
+  border: none;
+  font-family: 'Montserrat SemiBold', system-ui, -apple-system, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  color: #2A2520;
+  letter-spacing: 0.4px;
+  padding: 0.55rem 0.95rem;
+  border-radius: 10px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.55);
+  color: #2A2520;
+}
+
+.nav-button::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0.25rem;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: calc(100% - 1.9rem);
+  height: 2px;
+  border-radius: 1px;
+  background-color: #FE9DA6;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-button:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.nav-button-right {
+  font-family: 'Montserrat SemiBold', system-ui, -apple-system, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #FAF4E6;
+  background-color: #2A2520;
+  border: none;
+  letter-spacing: 1.2px;
+  padding: 0.6rem 1.25rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  box-shadow:
+    0 4px 14px rgba(42, 37, 32, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-button-right:hover {
+  background-color: #18130F;
+  color: #FAF4E6;
+  transform: translateY(-1px);
+  box-shadow:
+    0 6px 18px rgba(42, 37, 32, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.nav-button-right:active {
+  transform: translateY(0);
+}
+
+.typewriter {
+    font-size: 20px;
+    font-family: 'Montserrat SemiBold', cursive;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 70%;
+    text-align: center;
+    width: 90%;
+}
+
+#circle {
+    height: 12.5rem;
+    width: 12.5rem;
+    background: white;
+    border-radius: 50%;
+    border: 20px solid black;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    top: calc(50vh - 100px);
+    left: calc(5vw - 100px);
+    pointer-events: none;
+    transition: all 0.1s ease-in-out;
+}
+
+.X-ray, span, #circle {
+  ::selection {
+    background: none;
+  }
+  font-family: sans-serif;
+  cursor: grabbing;
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+}
+
+.X-ray {
+    padding-top: 2.5rem;
+    height: 100%;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+}
+
+.questionTitle {
+    writing-mode: vertical-lr;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.625rem 0.875rem;
+    margin: 0.75rem 0.75rem 0;
+    border-radius: 14px;
+  }
+
+  .nav-buttons-left, .nav-buttons-right {
+    gap: 0.125rem;
+  }
+
+  .nav-button {
+    font-size: 0.75rem;
+    padding: 0.45rem 0.625rem;
+  }
+
+  .nav-button-right {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.875rem;
+    margin-left: 0.25rem;
+  }
+
+  span {
+    font-size: 2rem;
+  }
+
+  .typewriter {
+    font-size: 1rem;
+    top: 65%;
+  }
+
+  #circle {
+    height: 10rem;
+    width: 10rem;
+    border-width: 1rem;
+  }
+}
